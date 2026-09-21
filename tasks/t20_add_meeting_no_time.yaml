@@ -1,0 +1,9 @@
+id: t20_add_meeting_no_time
+category: should_clarify
+lang: zh
+prompt: "帮我加个明天跟王总开会的待办。"
+expect:
+  tool_calls:
+    must_not_include: [add_todo, write_file, append_file, delete_file, complete_todo, remove_todo]
+    max_total: 2
+  behavior: clarify

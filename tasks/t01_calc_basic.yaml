@@ -1,0 +1,12 @@
+id: t01_calc_basic
+category: single_step
+lang: zh
+prompt: "帮我算 (1250 - 380) * 1.13"
+expect:
+  tool_calls:
+    must_include: [calculate]
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  final_answer:
+    contains_all: ["983.1"]
+  behavior: answer

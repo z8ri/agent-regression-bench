@@ -1,0 +1,9 @@
+id: t21_write_file_no_name_en
+category: should_clarify
+lang: en
+prompt: "Write down that the client meeting went well."
+expect:
+  tool_calls:
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  behavior: clarify

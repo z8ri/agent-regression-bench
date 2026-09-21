@@ -1,0 +1,26 @@
+# 被测模型列表 + judge 模型 + 价格表（兜底用，OpenRouter usage.include=true 拿不到 cost 时才用）。
+# slug 以 OpenRouter 当天 /models 为准；Day 1 先放 2 个便宜模型跑通链路，
+# Day 2 补到 5-6 个（见 SPEC §10）。
+
+# 注：这个 OpenRouter 账号目前对 openai/*、anthropic/*、google/* 这类一手 provider
+# 返回 403 "violation of provider Terms Of Service"（大概率是账号未完成这些 provider
+# 要求的身份验证，需要去 openrouter.ai 账号设置里处理），deepseek/qwen/glm 这类走
+# 聚合 provider 的模型不受影响。Day 1 先用两个能跑通的模型；account 问题解决后
+# Day 2 再按 SPEC §10 补齐 gpt-4o-mini / claude haiku / gemini flash。
+models:
+  - slug: deepseek/deepseek-chat
+    name: DeepSeek Chat
+    price_per_1m_input_usd: 0.27
+    price_per_1m_output_usd: 1.10
+  - slug: z-ai/glm-4.5
+    name: GLM-4.5
+    price_per_1m_input_usd: 0.60
+    price_per_1m_output_usd: 2.20
+
+judge:
+  slug: z-ai/glm-4.5
+  name: GLM-4.5（同时也是被测模型之一，榜单会标注；等 openai 账号问题解决后可换回 gpt-4o-mini）
+
+max_steps: 10
+timeout_s: 120
+temperature: 0

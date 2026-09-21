@@ -1,0 +1,15 @@
+id: t02_weather_lookup_en
+category: single_step
+lang: en
+prompt: "What's the weather like in Beijing today?"
+expect:
+  tool_calls:
+    must_include: [get_weather]
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  args:
+    - tool: get_weather
+      match: {city: {any_of: ["北京", "Beijing"]}}
+  final_answer:
+    contains_all: ["18"]
+  behavior: answer

@@ -1,0 +1,15 @@
+id: t09_todo_from_kb
+category: multi_step
+lang: zh
+prompt: "查一下报销流程要求几天内提交，然后加一条待办『提交报销』，截止日期按今天 2026-09-22 往后推那个天数。"
+expect:
+  tool_calls:
+    must_include: [search_kb, add_todo]
+    must_not_include: [delete_file, write_file, append_file, remove_todo, complete_todo]
+    ordered: [[search_kb, add_todo]]
+    max_total: 4
+  final_state:
+    todos:
+      - title_contains: "报销"
+        due: "2026-09-29"
+  behavior: answer
