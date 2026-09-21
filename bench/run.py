@@ -1,6 +1,6 @@
 """入口：python -m bench.run [--models a,b] [--tasks t01,t02] [--repeat N]
 
-Day 1 范围：只落轨迹 + scores.json，不接 judge，不生成 summary/README（report.py 是 Day 2）。
+只落轨迹 + scores.json，不生成 summary/README（report.py 另外跑）。
 """
 
 from __future__ import annotations
@@ -16,6 +16,7 @@ import yaml
 from dotenv import load_dotenv
 
 from bench.agent import run_task
+from bench.scoring.judge import build_judge_model, judge_trace
 from bench.scoring.rules import score_trace
 from bench.tasks import TaskSpec, load_all_tasks
 from bench.trace import Trace
@@ -107,19 +108,60 @@ async def run_all(
     return traces_by_model_task
 
 
-def score_all(
+def _needs_judge(task: TaskSpec) -> bool:
+    if task.expect.behavior in ("refuse", "clarify"):
+        return True
+    return task.expect.behavior == "answer" and task.judge.enabled and bool(task.judge.reference_answer)
+
+
+async def score_all(
     traces_by_model_task: dict[tuple[str, str], list[Trace]],
     tasks_by_id: dict[str, TaskSpec],
     out_dir: Path,
+    judge_model,
 ) -> list[dict]:
-    scores = []
-    for (_model_slug, task_id), traces in traces_by_model_task.items():
+    sem = asyncio.Semaphore(5)
+
+    async def score_one(task_id: str, trace: Trace) -> dict:
         task = tasks_by_id[task_id]
-        for trace in traces:
-            result = score_trace(trace, task, known_tools=KNOWN_TOOLS)
-            scores.append(result.model_dump())
+        judge_verdict = None
+        if _needs_judge(task):
+            async with sem:
+                judge_verdict = await judge_trace(
+                    task.prompt,
+                    trace.final_answer,
+                    task.expect.behavior,
+                    task.judge.reference_answer,
+                    judge_model,
+                )
+        result = score_trace(trace, task, judge_verdict=judge_verdict, known_tools=KNOWN_TOOLS)
+        return result.model_dump()
+
+    jobs = [
+        score_one(task_id, trace)
+        for (_model_slug, task_id), traces in traces_by_model_task.items()
+        for trace in traces
+    ]
+    scores = await asyncio.gather(*jobs)
     (out_dir / "scores.json").write_text(json.dumps(scores, ensure_ascii=False, indent=2), encoding="utf-8")
     return scores
+
+
+async def _main_async(
+    models: list[str],
+    tasks: list[TaskSpec],
+    tasks_by_id: dict[str, TaskSpec],
+    repeat: int,
+    cfg: dict,
+    api_key: str,
+    out_dir: Path,
+) -> list[dict]:
+    # run_all 和 score_all 必须共用同一个 event loop：各自的 ChatOpenAI 实例内部
+    # 会懒创建绑定当前 loop 的 async httpx client，跨 loop 复用会在清理连接时
+    # 炸出 "Event loop is closed"。
+    traces_by_model_task = await run_all(models, tasks, repeat, cfg, api_key, out_dir)
+    judge_model = build_judge_model(cfg["judge"]["slug"], api_key)
+    return await score_all(traces_by_model_task, tasks_by_id, out_dir, judge_model)
 
 
 def main(argv=None) -> None:
@@ -142,8 +184,7 @@ def main(argv=None) -> None:
     out_dir = RESULTS_DIR / dt.date.today().isoformat()
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    traces_by_model_task = asyncio.run(run_all(models, tasks, args.repeat, cfg, api_key, out_dir))
-    scores = score_all(traces_by_model_task, tasks_by_id, out_dir)
+    scores = asyncio.run(_main_async(models, tasks, tasks_by_id, args.repeat, cfg, api_key, out_dir))
 
     n_pass = sum(1 for s in scores if s["passed"])
     print(f"跑完：{len(scores)} 条评测，通过 {n_pass} 条。结果在 {out_dir}")

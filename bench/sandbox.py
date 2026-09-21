@@ -7,9 +7,11 @@ import json
 import os
 import sys
 import tempfile
+from contextlib import AsyncExitStack
 from pathlib import Path
 
 from langchain_mcp_adapters.client import MultiServerMCPClient
+from langchain_mcp_adapters.tools import load_mcp_tools
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -73,10 +75,22 @@ def _connections(sandbox_dir: Path) -> dict:
 
 @contextlib.asynccontextmanager
 async def sandbox_session(setup: dict):
-    """建临时沙箱目录 + 5 个 MCP server 的工具列表；退出时自动清理临时目录。"""
+    """建临时沙箱目录 + 5 个 MCP server 的工具列表；退出时自动清理临时目录。
+
+    每个 server 只开一个常驻 session，任务期间所有工具调用复用它——不用
+    MultiServerMCPClient.get_tools() 的默认行为（每次工具调用都新开一个 session，
+    也就是新起一个子进程）。实测在 5 模型并发、每任务好几次工具调用的负载下，
+    默认行为的子进程 churn 大到会把某个 server 的 stdio JSON-RPC 帧撞坏
+    （`Extra data` JSONDecodeError），常驻 session 把子进程数从"每次调用一个"
+    降到"每个 server 一个"，规避这个问题。
+    """
     with tempfile.TemporaryDirectory(prefix="agent-bench-") as tmp:
         sandbox_dir = Path(tmp).resolve()
         write_setup(sandbox_dir, setup)
         client = MultiServerMCPClient(_connections(sandbox_dir))
-        tools = await client.get_tools()
-        yield sandbox_dir, tools
+        async with AsyncExitStack() as stack:
+            tools = []
+            for name in SERVER_MODULES:
+                session = await stack.enter_async_context(client.session(name))
+                tools.extend(await load_mcp_tools(session))
+            yield sandbox_dir, tools

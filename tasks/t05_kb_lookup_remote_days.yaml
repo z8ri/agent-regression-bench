@@ -1,0 +1,12 @@
+id: t05_kb_lookup_remote_days
+category: single_step
+lang: zh
+prompt: "员工每月最多可以申请几天远程办公？"
+expect:
+  tool_calls:
+    must_include: [search_kb]
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  final_answer:
+    contains_all: ["4"]
+  behavior: answer

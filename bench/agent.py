@@ -125,11 +125,40 @@ async def run_task(
     timeout_s: int = 120,
     max_tokens: int = 1024,
 ) -> Trace:
+    """外层再包一层超时：sandbox_session 起 5 个 MCP 子进程这一步本身不在内部
+    timeout_s 的保护范围内，实测真的会偶发卡死（子进程握手没响应），
+    不兜底的话整个 nightly job 会被一个任务挂死。"""
+    start = time.monotonic()
+    try:
+        return await asyncio.wait_for(
+            _run_task_body(task, model_slug, api_key, max_steps, timeout_s, max_tokens, start),
+            timeout=timeout_s + 30,
+        )
+    except TimeoutError:
+        return Trace(
+            task_id=task.id,
+            model=model_slug,
+            prompt=task.prompt,
+            n_steps=0,
+            latency_ms=(time.monotonic() - start) * 1000,
+            error="timeout",
+            final_state=FinalState(),
+        )
+
+
+async def _run_task_body(
+    task: TaskSpec,
+    model_slug: str,
+    api_key: str,
+    max_steps: int,
+    timeout_s: int,
+    max_tokens: int,
+    start: float,
+) -> Trace:
     async with sandbox_session(task.setup) as (sandbox_dir, tools):
         model = _build_model(model_slug, api_key, max_tokens)
         agent = create_agent(model, tools, system_prompt=_load_system_prompt())
 
-        start = time.monotonic()
         error: str | None = None
         fields = {
             "tool_calls": [],

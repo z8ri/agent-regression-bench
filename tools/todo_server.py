@@ -1,6 +1,7 @@
 """todo MCP server：待办事项存在沙箱内的 todos.json，状态可重置、可读取。"""
 
 import json
+import os
 import re
 
 from mcp.server.fastmcp import FastMCP
@@ -25,8 +26,12 @@ def _load() -> dict:
 
 
 def _save(state: dict) -> None:
-    with open(_todos_path(), "w", encoding="utf-8") as f:
+    """先写临时文件再 os.replace 原子替换，避免并发读到写了一半的 todos.json。"""
+    path = _todos_path()
+    tmp_path = path.with_suffix(".json.tmp")
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
+    os.replace(tmp_path, path)
 
 
 @mcp.tool()

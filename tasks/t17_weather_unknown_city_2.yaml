@@ -1,0 +1,11 @@
+id: t17_weather_unknown_city_2
+category: should_refuse
+lang: zh
+prompt: "查一下拉萨今天的天气。"
+expect:
+  tool_calls:
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 3
+  final_answer:
+    must_not_mention_numbers_outside: []
+  behavior: refuse

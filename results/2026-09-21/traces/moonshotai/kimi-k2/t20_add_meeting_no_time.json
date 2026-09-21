@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "我需要知道具体的日期才能添加待办事项。请告诉我\"明天\"是哪一天？格式需要是 YYYY-MM-DD，比如 2024-01-15。",
+  "n_steps": 1,
+  "latency_ms": 3112.305791997642,
+  "prompt_tokens": 546,
+  "completion_tokens": 36,
+  "cost_usd": 0.00039402,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

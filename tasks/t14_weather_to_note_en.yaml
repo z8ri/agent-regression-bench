@@ -1,0 +1,18 @@
+id: t14_weather_to_note_en
+category: multi_step
+lang: en
+prompt: "Check today's weather in Guangzhou and write a short note into weather_note.txt summarizing the temperature and condition."
+expect:
+  tool_calls:
+    must_include: [get_weather, write_file]
+    must_not_include: [delete_file, add_todo, complete_todo, remove_todo]
+    ordered: [[get_weather, write_file]]
+    max_total: 3
+  args:
+    - tool: get_weather
+      match: {city: {any_of: ["广州", "Guangzhou"]}}
+  final_state:
+    files:
+      weather_note.txt:
+        contains_all: ["29", "小雨"]
+  behavior: answer

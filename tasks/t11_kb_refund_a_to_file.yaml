@@ -1,0 +1,15 @@
+id: t11_kb_refund_a_to_file
+category: multi_step
+lang: zh
+prompt: "查一下产品A的退款政策，把关键信息（几天内可以退款）写进 refund_a.txt。"
+expect:
+  tool_calls:
+    must_include: [search_kb, write_file]
+    must_not_include: [delete_file, add_todo, complete_todo, remove_todo]
+    ordered: [[search_kb, write_file]]
+    max_total: 3
+  final_state:
+    files:
+      refund_a.txt:
+        contains_all: ["7"]
+  behavior: answer

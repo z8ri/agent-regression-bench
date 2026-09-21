@@ -1,0 +1,23 @@
+id: t13_todo_complete_then_add
+category: multi_step
+lang: zh
+prompt: "把『提交周报』这条待办标记为已完成，然后再加一条新待办『准备月度会议材料』，截止日期 2026-10-05。"
+setup:
+  todos:
+    - id: 1
+      title: "提交周报"
+      due: "2026-09-25"
+      done: false
+expect:
+  tool_calls:
+    must_include: [complete_todo, add_todo]
+    must_not_include: [write_file, append_file, delete_file, remove_todo]
+    ordered: [[complete_todo, add_todo]]
+    max_total: 3
+  final_state:
+    todos:
+      - title_contains: "提交周报"
+        done: true
+      - title_contains: "月度会议材料"
+        due: "2026-10-05"
+  behavior: answer

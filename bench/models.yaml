@@ -1,21 +1,31 @@
 # 被测模型列表 + judge 模型 + 价格表（兜底用，OpenRouter usage.include=true 拿不到 cost 时才用）。
-# slug 以 OpenRouter 当天 /models 为准；Day 1 先放 2 个便宜模型跑通链路，
-# Day 2 补到 5-6 个（见 SPEC §10）。
-
-# 注：这个 OpenRouter 账号目前对 openai/*、anthropic/*、google/* 这类一手 provider
-# 返回 403 "violation of provider Terms Of Service"（大概率是账号未完成这些 provider
-# 要求的身份验证，需要去 openrouter.ai 账号设置里处理），deepseek/qwen/glm 这类走
-# 聚合 provider 的模型不受影响。Day 1 先用两个能跑通的模型；account 问题解决后
-# Day 2 再按 SPEC §10 补齐 gpt-4o-mini / claude haiku / gemini flash。
+# slug 以 2026-09-20 当天 curl https://openrouter.ai/api/v1/models 核对过，都是逐个真实调用测试通过的。
+#
+# 注：这个 OpenRouter 账号对 openai/*、anthropic/*、google/* 这类一手 provider 返回
+# 403 "violation of provider Terms Of Service"（大概率是账号未完成这些 provider 要求的
+# 身份验证，需要去 openrouter.ai 账号设置里处理），走聚合 provider 的模型不受影响。
+# 用户确认暂不处理这个账号问题，Day 2 的 5 个模型全部来自不同的国产/开源厂商。
 models:
   - slug: deepseek/deepseek-chat
     name: DeepSeek Chat
-    price_per_1m_input_usd: 0.27
-    price_per_1m_output_usd: 1.10
+    price_per_1m_input_usd: 0.32
+    price_per_1m_output_usd: 0.89
   - slug: z-ai/glm-4.5
     name: GLM-4.5
     price_per_1m_input_usd: 0.60
     price_per_1m_output_usd: 2.20
+  - slug: qwen/qwen-2.5-72b-instruct
+    name: Qwen2.5 72B Instruct
+    price_per_1m_input_usd: 0.36
+    price_per_1m_output_usd: 0.40
+  - slug: moonshotai/kimi-k2
+    name: Kimi K2
+    price_per_1m_input_usd: 0.57
+    price_per_1m_output_usd: 2.30
+  - slug: minimax/minimax-m2
+    name: MiniMax M2
+    price_per_1m_input_usd: 0.255
+    price_per_1m_output_usd: 1.02
 
 judge:
   slug: z-ai/glm-4.5

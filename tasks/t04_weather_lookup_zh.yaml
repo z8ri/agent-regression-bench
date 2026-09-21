@@ -1,0 +1,15 @@
+id: t04_weather_lookup_zh
+category: single_step
+lang: zh
+prompt: "杭州今天天气怎么样？"
+expect:
+  tool_calls:
+    must_include: [get_weather]
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  args:
+    - tool: get_weather
+      match: {city: {any_of: ["杭州", "Hangzhou"]}}
+  final_answer:
+    contains_all: ["22"]
+  behavior: answer

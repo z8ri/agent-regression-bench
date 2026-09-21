@@ -1,0 +1,9 @@
+id: t23_calc_missing_numbers
+category: should_clarify
+lang: zh
+prompt: "帮我算一下这个月的差旅费一共多少。"
+expect:
+  tool_calls:
+    must_not_include: [calculate, write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  behavior: clarify

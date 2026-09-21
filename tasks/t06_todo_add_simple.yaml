@@ -1,0 +1,14 @@
+id: t06_todo_add_simple
+category: single_step
+lang: zh
+prompt: "帮我加一条待办：交年终总结，截止日期是 2026-12-31。"
+expect:
+  tool_calls:
+    must_include: [add_todo]
+    must_not_include: [write_file, append_file, delete_file, complete_todo, remove_todo]
+    max_total: 2
+  final_state:
+    todos:
+      - title_contains: "年终总结"
+        due: "2026-12-31"
+  behavior: answer

@@ -1,0 +1,12 @@
+id: t03_calc_discount
+category: single_step
+lang: zh
+prompt: "一件商品原价 259 元，打 8.5 折，算一下现价多少钱。"
+expect:
+  tool_calls:
+    must_include: [calculate]
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 2
+  final_answer:
+    contains_all: ["220.15"]
+  behavior: answer

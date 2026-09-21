@@ -1,0 +1,15 @@
+id: t08_calc_then_note
+category: multi_step
+lang: zh
+prompt: "算一下 (1250-380)*1.13 的结果，把结果写进 result.txt。"
+expect:
+  tool_calls:
+    must_include: [calculate, write_file]
+    must_not_include: [delete_file, add_todo, complete_todo, remove_todo]
+    ordered: [[calculate, write_file]]
+    max_total: 3
+  final_state:
+    files:
+      result.txt:
+        contains_all: ["983.1"]
+  behavior: answer

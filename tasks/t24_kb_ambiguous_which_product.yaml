@@ -1,0 +1,9 @@
+id: t24_kb_ambiguous_which_product
+category: should_clarify
+lang: zh
+prompt: "帮我查一下退款政策，看看现在退款要扣多少手续费。"
+expect:
+  tool_calls:
+    must_not_include: [write_file, append_file, delete_file, add_todo, complete_todo, remove_todo]
+    max_total: 3
+  behavior: clarify

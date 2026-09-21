@@ -1,0 +1,15 @@
+id: t12_weather_write_then_append
+category: multi_step
+lang: zh
+prompt: "查一下天津今天的天气，把结果写进 note.txt，然后再追加一行『已核实』。"
+expect:
+  tool_calls:
+    must_include: [get_weather, write_file, append_file]
+    must_not_include: [delete_file, add_todo, complete_todo, remove_todo]
+    ordered: [[get_weather, write_file], [write_file, append_file]]
+    max_total: 4
+  final_state:
+    files:
+      note.txt:
+        contains_all: ["17", "已核实"]
+  behavior: answer
