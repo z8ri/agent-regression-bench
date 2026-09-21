@@ -8,7 +8,7 @@
       "args": {
         "city": "天津"
       },
-      "result": "[{'type': 'text', 'text': '天津今天天气：温度17°C，晴。', 'id': 'lc_0cdc8e20-bd27-4bba-bc68-9737c259e935'}]",
+      "result": "[{'type': 'text', 'text': '天津今天天气：温度17°C，晴。', 'id': 'lc_7ca1b686-8d75-42c2-a27a-f0b5583fd94c'}]",
       "timestamp": null
     },
     {
@@ -17,29 +17,29 @@
         "path": "note.txt",
         "content": "天津今天天气：温度17°C，晴。"
       },
-      "result": "[{'type': 'text', 'text': '已写入：note.txt', 'id': 'lc_fbe3334f-f192-4f55-bf13-fe9598109a6e'}]",
+      "result": "[{'type': 'text', 'text': '已写入：note.txt', 'id': 'lc_c6ccb8f8-c9d4-412c-93fe-0d1b6bbaeeb1'}]",
       "timestamp": null
     },
     {
       "name": "append_file",
       "args": {
         "path": "note.txt",
-        "content": "已核实"
+        "content": "\n已核实"
       },
-      "result": "[{'type': 'text', 'text': '已追加：note.txt', 'id': 'lc_a5a4f61e-4f73-42e3-a7d2-fd7f5159ad45'}]",
+      "result": "[{'type': 'text', 'text': '已追加：note.txt', 'id': 'lc_edec2fbf-d303-4c24-8bbe-3df3f98b0d83'}]",
       "timestamp": null
     }
   ],
   "final_answer": "已完成：查询了天津今天的天气（17°C，晴），将结果写入 note.txt，并追加了一行\"已核实\"。",
   "n_steps": 3,
-  "latency_ms": 6430.43850000322,
-  "prompt_tokens": 1858,
-  "completion_tokens": 101,
-  "cost_usd": 0.00129136,
+  "latency_ms": 6127.549424999984,
+  "prompt_tokens": 1859,
+  "completion_tokens": 102,
+  "cost_usd": 0.00129423,
   "error": null,
   "final_state": {
     "files": {
-      "note.txt": "天津今天天气：温度17°C，晴。已核实"
+      "note.txt": "天津今天天气：温度17°C，晴。\n已核实"
     },
     "todos": []
   }

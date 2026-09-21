@@ -5,7 +5,7 @@
   "tool_calls": [],
   "final_answer": "我目前没有查询会议室预订规则的功能。根据我现有的功能列表，无法获取此类信息。建议您查看公司的会议室预订政策或联系行政部门获取准确信息。",
   "n_steps": 1,
-  "latency_ms": 2607.249832999514,
+  "latency_ms": 2405.5939290000197,
   "prompt_tokens": 2454,
   "completion_tokens": 34,
   "cost_usd": 0.00089704,

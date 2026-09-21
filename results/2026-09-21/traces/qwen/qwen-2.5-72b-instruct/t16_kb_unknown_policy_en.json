@@ -8,16 +8,16 @@
       "args": {
         "query": "pet insurance reimbursement policy"
       },
-      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_cdd137bf-af4b-4442-aada-934942b7c882'}]",
+      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_5556d68a-6961-405a-84e3-b3a786841107'}]",
       "timestamp": null
     }
   ],
   "final_answer": "我们的内部知识库中没有关于员工宠物保险报销政策的相关信息。建议您查阅公司的人力资源手册或直接咨询人力资源部门以获取准确信息。",
   "n_steps": 2,
-  "latency_ms": 3181.787957997585,
-  "prompt_tokens": 4999,
+  "latency_ms": 3363.9112990000085,
+  "prompt_tokens": 5007,
   "completion_tokens": 56,
-  "cost_usd": 0.00182204,
+  "cost_usd": 0.00182492,
   "error": null,
   "final_state": {
     "files": {},

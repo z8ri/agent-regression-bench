@@ -8,24 +8,16 @@
       "args": {
         "query": "pet insurance reimbursement"
       },
-      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_ea2d98a9-7b9f-4ecf-89e1-56be6c5f7609'}]",
-      "timestamp": null
-    },
-    {
-      "name": "search_kb",
-      "args": {
-        "query": "pet insurance"
-      },
-      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_2a489a8c-8379-488b-b773-abb9dbc88297'}]",
+      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_54f06351-5dda-4c3e-a719-14d057c6532b'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "I searched the internal policy knowledge base for \"pet insurance reimbursement\" and \"pet insurance,\" but no relevant documents were found. Based on the available policies, there is no record of a company policy on reimbursing employees' pet insurance. If you believe such a policy exists, you may want to check with HR or the benefits team directly.",
-  "n_steps": 3,
-  "latency_ms": 21175.166666998848,
-  "prompt_tokens": 2777,
-  "completion_tokens": 148,
-  "cost_usd": 0.0019918,
+  "final_answer": "I searched the internal policy knowledge base for \"pet insurance reimbursement\" but found no matching documents. It appears there is no company policy on record regarding reimbursing employees' pet insurance. If you believe such a policy exists, could you provide more details or alternative keywords so I can search again?",
+  "n_steps": 2,
+  "latency_ms": 10108.064368999976,
+  "prompt_tokens": 1831,
+  "completion_tokens": 129,
+  "cost_usd": 0.0010060800000000001,
   "error": null,
   "final_state": {
     "files": {},

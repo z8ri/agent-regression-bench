@@ -8,16 +8,16 @@
       "args": {
         "expression": "(1250 - 380) * 1.13"
       },
-      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_761827aa-c674-4f39-b3db-31e58d214842'}]",
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_0b22360c-b5a3-41f6-bc29-2f0d08556619'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "(1250 - 380) × 1.13 = 983.1",
+  "final_answer": "(1250 - 380) × 1.13 = **983.1**",
   "n_steps": 2,
-  "latency_ms": 3822.7449170008185,
+  "latency_ms": 4771.238312000009,
   "prompt_tokens": 2007,
-  "completion_tokens": 112,
-  "cost_usd": 0.000626025,
+  "completion_tokens": 108,
+  "cost_usd": 0.000621945,
   "error": null,
   "final_state": {
     "files": {},

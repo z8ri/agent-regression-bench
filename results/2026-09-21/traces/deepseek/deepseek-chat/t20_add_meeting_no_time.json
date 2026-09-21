@@ -9,16 +9,16 @@
         "title": "跟王总开会",
         "due": "2023-10-06"
       },
-      "result": "[{'type': 'text', 'text': '已新增待办 #1：跟王总开会', 'id': 'lc_5b8ddb6f-d6a7-4c3f-b022-5441408a9889'}]",
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：跟王总开会', 'id': 'lc_72f9ff6c-5dd7-49b0-91eb-2cfda39ea8ef'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "已为您添加一条待办事项：“跟王总开会”，截止日期为明天（2023-10-06）。",
+  "final_answer": "已为您添加了一条待办事项：“跟王总开会”，并设置了截止日期为明天。",
   "n_steps": 2,
-  "latency_ms": 9653.89329199752,
-  "prompt_tokens": 3479,
-  "completion_tokens": 63,
-  "cost_usd": 0.0010932664,
+  "latency_ms": 4226.700945000004,
+  "prompt_tokens": 4501,
+  "completion_tokens": 58,
+  "cost_usd": 0.00149194,
   "error": null,
   "final_state": {
     "files": {},

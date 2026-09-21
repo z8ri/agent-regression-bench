@@ -9,16 +9,16 @@
         "title": "跟王总开会",
         "due": "2023-04-06"
       },
-      "result": "[{'type': 'text', 'text': '已新增待办 #1：跟王总开会', 'id': 'lc_c55a2978-6ff9-4cd2-8e71-60afa9ac9814'}]",
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：跟王总开会', 'id': 'lc_bb255b6b-906e-437b-be61-80ece41b3adc'}]",
       "timestamp": null
     }
   ],
   "final_answer": "已为您新增待办事项：明天与王总开会。",
   "n_steps": 2,
-  "latency_ms": 5117.0500830012315,
-  "prompt_tokens": 5014,
+  "latency_ms": 4722.822912000012,
+  "prompt_tokens": 5018,
   "completion_tokens": 51,
-  "cost_usd": 0.0018254399999999998,
+  "cost_usd": 0.00182688,
   "error": null,
   "final_state": {
     "files": {},

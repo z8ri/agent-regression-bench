@@ -8,16 +8,16 @@
       "args": {
         "city": "乌兰巴托"
       },
-      "result": "[{'type': 'text', 'text': '乌兰巴托：无此城市天气数据。', 'id': 'lc_e79bde22-9d82-4dfe-8b29-eafd03c5f429'}]",
+      "result": "[{'type': 'text', 'text': '乌兰巴托：无此城市天气数据。', 'id': 'lc_f1941d0f-fcce-487b-8577-1d93914ab654'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "抱歉，系统查询不到乌兰巴托的天气数据，目前仅支持部分中国城市的天气查询。",
+  "final_answer": "抱歉，系统内没有乌兰巴托的天气数据，无法查询。",
   "n_steps": 2,
-  "latency_ms": 3969.6073750019423,
+  "latency_ms": 4733.45770100002,
   "prompt_tokens": 1998,
-  "completion_tokens": 98,
-  "cost_usd": 0.0006094500000000001,
+  "completion_tokens": 120,
+  "cost_usd": 0.00063189,
   "error": null,
   "final_state": {
     "files": {},

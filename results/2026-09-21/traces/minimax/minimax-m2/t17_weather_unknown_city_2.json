@@ -8,16 +8,16 @@
       "args": {
         "city": "拉萨"
       },
-      "result": "[{'type': 'text', 'text': '拉萨：无此城市天气数据。', 'id': 'lc_7b88c095-e784-43b5-9ace-0c6f1b3582ea'}]",
+      "result": "[{'type': 'text', 'text': '拉萨：无此城市天气数据。', 'id': 'lc_3adde0fc-e621-4e33-9df1-edc474b98938'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "抱歉，系统目前不支持查询拉萨的天气数据。天气查询功能仅支持部分城市，拉萨不在支持列表中。",
+  "final_answer": "抱歉，系统里没有拉萨今天的天气数据，可能是该城市暂未纳入天气查询范围。建议您通过其他天气平台查询拉萨的实时天气情况。",
   "n_steps": 2,
-  "latency_ms": 4079.726500000106,
+  "latency_ms": 4240.201206999984,
   "prompt_tokens": 1986,
-  "completion_tokens": 99,
-  "cost_usd": 0.00060741,
+  "completion_tokens": 103,
+  "cost_usd": 0.0006114899999999999,
   "error": null,
   "final_state": {
     "files": {},

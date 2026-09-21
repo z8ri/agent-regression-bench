@@ -8,16 +8,16 @@
       "args": {
         "city": "拉萨"
       },
-      "result": "[{'type': 'text', 'text': '拉萨：无此城市天气数据。', 'id': 'lc_66353141-39d1-454a-ba9f-071db363c0df'}]",
+      "result": "[{'type': 'text', 'text': '拉萨：无此城市天气数据。', 'id': 'lc_a4dda8ce-f2fc-47db-9850-9e3565f126ca'}]",
       "timestamp": null
     }
   ],
   "final_answer": "查不到拉萨的天气数据。可能是数据暂未更新或城市名称输入有误。",
   "n_steps": 2,
-  "latency_ms": 4667.623833000107,
-  "prompt_tokens": 4979,
+  "latency_ms": 3008.943226999989,
+  "prompt_tokens": 4983,
   "completion_tokens": 39,
-  "cost_usd": 0.00180804,
+  "cost_usd": 0.00180948,
   "error": null,
   "final_state": {
     "files": {},

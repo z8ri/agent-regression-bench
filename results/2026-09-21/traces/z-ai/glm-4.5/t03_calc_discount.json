@@ -8,13 +8,13 @@
       "args": {
         "expression": "259 * 0.85"
       },
-      "result": "[{'type': 'text', 'text': '220.15', 'id': 'lc_18b3a889-8c96-4017-8530-e7029a662595'}]",
+      "result": "[{'type': 'text', 'text': '220.15', 'id': 'lc_3b7fd62c-28f8-4205-a3e7-42e9104e1bc7'}]",
       "timestamp": null
     }
   ],
   "final_answer": "商品原价 259 元，打 8.5 折后的现价为 **220.15 元**。",
   "n_steps": 2,
-  "latency_ms": 11149.551291000535,
+  "latency_ms": 11414.947165999998,
   "prompt_tokens": 1850,
   "completion_tokens": 111,
   "cost_usd": 0.0013542,

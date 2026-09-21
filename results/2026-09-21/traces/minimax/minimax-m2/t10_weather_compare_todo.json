@@ -8,7 +8,7 @@
       "args": {
         "city": "广州"
       },
-      "result": "[{'type': 'text', 'text': '广州今天天气：温度29°C，小雨。', 'id': 'lc_f64c98fd-aab1-4738-a205-ac7b360c1191'}]",
+      "result": "[{'type': 'text', 'text': '广州今天天气：温度29°C，小雨。', 'id': 'lc_4a42fa2f-82cc-4caf-8641-d2a25aa7952f'}]",
       "timestamp": null
     },
     {
@@ -16,7 +16,7 @@
       "args": {
         "city": "苏州"
       },
-      "result": "[{'type': 'text', 'text': '苏州今天天气：温度24°C，晴。', 'id': 'lc_eda11620-d80a-4d60-a944-1c04535b4b86'}]",
+      "result": "[{'type': 'text', 'text': '苏州今天天气：温度24°C，晴。', 'id': 'lc_23fd7dfa-0803-4ce6-870f-9006a2c7cd28'}]",
       "timestamp": null
     },
     {
@@ -24,16 +24,16 @@
       "args": {
         "title": "去广州出差"
       },
-      "result": "[{'type': 'text', 'text': '已新增待办 #1：去广州出差', 'id': 'lc_761dd148-64e0-43b8-8874-f85ff901e6e0'}]",
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：去广州出差', 'id': 'lc_396d33b0-c231-40ed-9f6d-433b7eb97b31'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "查到了：广州今天29°C（小雨），苏州今天24°C（晴）。广州更热，已添加待办「去广州出差」。",
+  "final_answer": "查询结果显示：广州今天29°C（小雨），苏州今天24°C（晴）。广州更热，已添加待办「去广州出差」。",
   "n_steps": 3,
-  "latency_ms": 5823.058792000666,
+  "latency_ms": 5415.5457729999625,
   "prompt_tokens": 3238,
-  "completion_tokens": 223,
-  "cost_usd": 0.00105315,
+  "completion_tokens": 219,
+  "cost_usd": 0.00104907,
   "error": null,
   "final_state": {
     "files": {},

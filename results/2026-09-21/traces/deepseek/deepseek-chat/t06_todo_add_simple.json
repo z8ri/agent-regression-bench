@@ -9,16 +9,16 @@
         "title": "交年终总结",
         "due": "2026-12-31"
       },
-      "result": "[{'type': 'text', 'text': '已新增待办 #1：交年终总结', 'id': 'lc_fcc316bf-cbfa-4a6d-af9b-233a7dbc341a'}]",
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：交年终总结', 'id': 'lc_85019940-f329-40ee-83c1-a38217293f43'}]",
       "timestamp": null
     }
   ],
   "final_answer": "已成功添加待办事项：交年终总结，截止日期为2026-12-31。",
   "n_steps": 2,
-  "latency_ms": 7988.612458000716,
-  "prompt_tokens": 4545,
-  "completion_tokens": 79,
-  "cost_usd": 0.0015247099999999999,
+  "latency_ms": 5300.472163000002,
+  "prompt_tokens": 4546,
+  "completion_tokens": 80,
+  "cost_usd": 0.00152592,
   "error": null,
   "final_state": {
     "files": {},

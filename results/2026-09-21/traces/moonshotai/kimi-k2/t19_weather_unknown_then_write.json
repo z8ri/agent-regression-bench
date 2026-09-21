@@ -8,30 +8,19 @@
       "args": {
         "city": "呼和浩特"
       },
-      "result": "[{'type': 'text', 'text': '呼和浩特：无此城市天气数据。', 'id': 'lc_9cb7c2d9-eedc-46f0-a216-7b17b0fcb7e3'}]",
-      "timestamp": null
-    },
-    {
-      "name": "write_file",
-      "args": {
-        "path": "city_weather.txt",
-        "content": "呼和浩特：无此城市天气数据。"
-      },
-      "result": "[{'type': 'text', 'text': '已写入：city_weather.txt', 'id': 'lc_49ad0777-4bef-46ca-b3e7-de34f95e57b8'}]",
+      "result": "[{'type': 'text', 'text': '呼和浩特：无此城市天气数据。', 'id': 'lc_f6c5033c-72fa-400a-aa3c-3281fc24d17f'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "已查询呼和浩特天气，但系统暂无该城市数据，已将结果写入 city_weather.txt。",
-  "n_steps": 3,
-  "latency_ms": 7864.751207998779,
-  "prompt_tokens": 1802,
-  "completion_tokens": 155,
-  "cost_usd": 0.00138364,
+  "final_answer": "抱歉，系统中没有呼和浩特的天气数据。无法将结果写入文件。",
+  "n_steps": 2,
+  "latency_ms": 3873.6285620000217,
+  "prompt_tokens": 1145,
+  "completion_tokens": 33,
+  "cost_usd": 0.00072855,
   "error": null,
   "final_state": {
-    "files": {
-      "city_weather.txt": "呼和浩特：无此城市天气数据。"
-    },
+    "files": {},
     "todos": []
   }
 }

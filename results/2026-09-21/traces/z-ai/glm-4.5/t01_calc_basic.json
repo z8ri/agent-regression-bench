@@ -8,13 +8,13 @@
       "args": {
         "expression": "(1250 - 380) * 1.13"
       },
-      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_7d72d33d-3bac-4362-bddd-8f72800353a7'}]",
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_4fb7199a-1f32-4c3c-b718-003006e1d204'}]",
       "timestamp": null
     }
   ],
   "final_answer": "计算结果：**(1250 - 380) × 1.13 = 983.1**",
   "n_steps": 2,
-  "latency_ms": 10130.117083001096,
+  "latency_ms": 12870.294349000002,
   "prompt_tokens": 1838,
   "completion_tokens": 82,
   "cost_usd": 0.0012832,

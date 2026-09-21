@@ -8,16 +8,16 @@
       "args": {
         "expression": "(1250 - 380) * 1.13"
       },
-      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_bc5b04cf-d119-476c-8d90-3f4cc0f8b732'}]",
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_953f457b-d816-4432-bdb0-f51019a1cf91'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "计算结果为：983.1。",
+  "final_answer": "计算结果为983.1。",
   "n_steps": 2,
-  "latency_ms": 5794.727791999321,
-  "prompt_tokens": 2467,
-  "completion_tokens": 37,
-  "cost_usd": 0.0006730677000000001,
+  "latency_ms": 5178.411349999998,
+  "prompt_tokens": 4493,
+  "completion_tokens": 38,
+  "cost_usd": 0.0014715800000000001,
   "error": null,
   "final_state": {
     "files": {},

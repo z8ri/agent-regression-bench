@@ -5,7 +5,7 @@
   "tool_calls": [],
   "final_answer": null,
   "n_steps": 1,
-  "latency_ms": 2272.593000001507,
+  "latency_ms": 3712.7348359999955,
   "prompt_tokens": 2236,
   "completion_tokens": 45,
   "cost_usd": 0.00075557,

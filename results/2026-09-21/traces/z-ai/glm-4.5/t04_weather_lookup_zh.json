@@ -8,16 +8,16 @@
       "args": {
         "city": "杭州"
       },
-      "result": "[{'type': 'text', 'text': '杭州今天天气：温度22°C，晴。', 'id': 'lc_df593882-1c55-4fb7-904b-5f350722d18b'}]",
+      "result": "[{'type': 'text', 'text': '杭州今天天气：温度22°C，晴。', 'id': 'lc_3ee450a1-3a3e-4062-b1d9-9a15b02783ce'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "杭州今天的天气是：**温度22°C，晴**。天气不错，适合外出活动！",
+  "final_answer": "杭州今天的天气是：**温度22°C，晴**。天气不错，适合外出！",
   "n_steps": 2,
-  "latency_ms": 10554.061749997345,
+  "latency_ms": 12896.192044000003,
   "prompt_tokens": 1816,
-  "completion_tokens": 72,
-  "cost_usd": 0.001248,
+  "completion_tokens": 67,
+  "cost_usd": 0.001237,
   "error": null,
   "final_state": {
     "files": {},

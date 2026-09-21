@@ -6,18 +6,18 @@
     {
       "name": "get_weather",
       "args": {
-        "city": "Hangzhou"
+        "city": "杭州"
       },
-      "result": "[{'type': 'text', 'text': 'Hangzhou今天天气：温度22°C，晴。', 'id': 'lc_140c1a82-dddb-4cd1-9611-de5120d26218'}]",
+      "result": "[{'type': 'text', 'text': '杭州今天天气：温度22°C，晴。', 'id': 'lc_e6e5b61a-3416-4405-aa89-7b5ad44cc64c'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "杭州今天的天气是晴天，温度为22°C。",
+  "final_answer": "杭州今天的天气是晴朗的，温度为22°C。",
   "n_steps": 2,
-  "latency_ms": 6056.0782499997,
+  "latency_ms": 6789.078101000001,
   "prompt_tokens": 4473,
-  "completion_tokens": 37,
-  "cost_usd": 0.00146429,
+  "completion_tokens": 36,
+  "cost_usd": 0.0014634000000000001,
   "error": null,
   "final_state": {
     "files": {},

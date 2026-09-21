@@ -8,16 +8,16 @@
       "args": {
         "city": "乌兰巴托"
       },
-      "result": "[{'type': 'text', 'text': '乌兰巴托：无此城市天气数据。', 'id': 'lc_061fe95d-38a1-4b8f-a9f4-d8e6dfce5c3c'}]",
+      "result": "[{'type': 'text', 'text': '乌兰巴托：无此城市天气数据。', 'id': 'lc_47cbc042-e2ab-48e2-8205-3def34a2e8c2'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "查不到乌兰巴托的天气数据。可能是城市名称拼写错误或数据暂不可用。请确认城市名称是否正确。",
+  "final_answer": "查不到乌兰巴托的天气数据。可能是城市名称输入有误或数据暂不可用。",
   "n_steps": 2,
-  "latency_ms": 3055.909457998496,
+  "latency_ms": 3487.753697999992,
   "prompt_tokens": 4995,
-  "completion_tokens": 52,
-  "cost_usd": 0.001819,
+  "completion_tokens": 45,
+  "cost_usd": 0.0018162,
   "error": null,
   "final_state": {
     "files": {},

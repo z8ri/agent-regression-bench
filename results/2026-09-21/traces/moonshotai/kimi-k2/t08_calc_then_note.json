@@ -8,7 +8,7 @@
       "args": {
         "expression": "(1250-380)*1.13"
       },
-      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_a9937ce3-47cb-42c0-bcc5-7f6ce582348a'}]",
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_5f6b3432-2f95-417c-8dba-4cbfd28d28de'}]",
       "timestamp": null
     },
     {
@@ -17,16 +17,16 @@
         "path": "result.txt",
         "content": "983.1"
       },
-      "result": "[{'type': 'text', 'text': '已写入：result.txt', 'id': 'lc_83034ed3-0ab7-491d-a9dc-c8fcd556eae8'}]",
+      "result": "[{'type': 'text', 'text': '已写入：result.txt', 'id': 'lc_7aa5d3dc-f764-4ca2-b328-0061cc62ea6f'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "已完成！计算 (1250-380)*1.13 的结果是 983.1，已写入 result.txt 文件。",
+  "final_answer": "计算完成！表达式 (1250-380)*1.13 的结果是 **983.1**，已写入 result.txt 文件。",
   "n_steps": 3,
-  "latency_ms": 6006.069167000533,
-  "prompt_tokens": 1803,
-  "completion_tokens": 76,
-  "cost_usd": 0.00120251,
+  "latency_ms": 7344.145918999999,
+  "prompt_tokens": 1807,
+  "completion_tokens": 97,
+  "cost_usd": 0.00125309,
   "error": null,
   "final_state": {
     "files": {

@@ -5,7 +5,7 @@
   "tool_calls": [],
   "final_answer": "我需要知道具体的日期才能添加待办事项。请告诉我\"明天\"是哪一天？格式需要是 YYYY-MM-DD，比如 2024-01-15。",
   "n_steps": 1,
-  "latency_ms": 3112.305791997642,
+  "latency_ms": 3715.0906080000254,
   "prompt_tokens": 546,
   "completion_tokens": 36,
   "cost_usd": 0.00039402,

@@ -8,16 +8,16 @@
       "args": {
         "city": "Beijing"
       },
-      "result": "[{'type': 'text', 'text': 'Beijing今天天气：温度18°C，晴。', 'id': 'lc_5ab86632-6b7d-4082-bef8-f1c1276da1b6'}]",
+      "result": "[{'type': 'text', 'text': 'Beijing今天天气：温度18°C，晴。', 'id': 'lc_23cbaeb2-0995-4ac1-85ff-6f28048e8bc2'}]",
       "timestamp": null
     }
   ],
-  "final_answer": "The weather in Beijing today is **18°C and sunny**.",
+  "final_answer": "The weather in Beijing today is **sunny** with a temperature of **18°C**.",
   "n_steps": 2,
-  "latency_ms": 7983.554708000156,
-  "prompt_tokens": 1139,
-  "completion_tokens": 64,
-  "cost_usd": 0.0007964300000000001,
+  "latency_ms": 4301.3132920000035,
+  "prompt_tokens": 1135,
+  "completion_tokens": 38,
+  "cost_usd": 0.00073435,
   "error": null,
   "final_state": {
     "files": {},
