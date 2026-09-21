@@ -101,6 +101,22 @@ def test_generate_report_from_two_fake_score_files(tmp_path, monkeypatch):
     assert "该模型同时也是本轮的 judge" in readme_text
 
 
+def test_generate_report_twice_same_date_does_not_duplicate_history(tmp_path, monkeypatch):
+    results_dir = _setup_fake_env(tmp_path, monkeypatch)
+    scores = [
+        _fake_score("f01_single", "model-a", True),
+        _fake_score("f01_single", "model-b", True),
+    ]
+    _write_scores(results_dir, "2026-09-18", scores)
+
+    report.generate_report("2026-09-18")
+    report.generate_report("2026-09-18")  # 同一天重跑一次 report，不该攒出重复行
+
+    with open(results_dir / "history.csv", encoding="utf-8") as f:
+        rows = list(csv.reader(f))
+    assert len(rows) == 1 + 2  # header + 2 模型各一行，不是 4 行
+
+
 def test_summarize_by_model_category_pass_rates():
     scores = [
         _fake_score("f01_single", "model-a", True),

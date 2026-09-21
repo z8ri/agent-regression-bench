@@ -260,13 +260,28 @@ def update_readme(auto_section: str) -> None:
     README_PATH.write_text(new_content, encoding="utf-8")
 
 
+def _read_existing_history() -> list[list[str]]:
+    if not HISTORY_CSV.is_file():
+        return []
+    with open(HISTORY_CSV, newline="", encoding="utf-8") as f:
+        rows = list(csv.reader(f))
+    return rows[1:] if rows else []  # 跳过表头，写回时统一重新加
+
+
 def append_history(date_str: str, rows: list[dict]) -> None:
+    """按 (date, model) 去重再写：同一天对同一份 scores.json 重跑 report 不会攒出重复行。"""
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    is_new = not HISTORY_CSV.is_file()
-    with open(HISTORY_CSV, "a", newline="", encoding="utf-8") as f:
+    new_models = {r["model"] for r in rows}
+    kept = [
+        existing
+        for existing in _read_existing_history()
+        if not (existing[0] == date_str and existing[1] in new_models)
+    ]
+
+    with open(HISTORY_CSV, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        if is_new:
-            writer.writerow(HISTORY_COLUMNS)
+        writer.writerow(HISTORY_COLUMNS)
+        writer.writerows(kept)
         for r in rows:
             writer.writerow(
                 [
