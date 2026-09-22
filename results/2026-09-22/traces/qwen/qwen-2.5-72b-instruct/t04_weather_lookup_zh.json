@@ -1,0 +1,26 @@
+{
+  "task_id": "t04_weather_lookup_zh",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "杭州今天天气怎么样？",
+  "tool_calls": [
+    {
+      "name": "get_weather",
+      "args": {
+        "city": "杭州"
+      },
+      "result": "[{'type': 'text', 'text': '杭州今天天气：温度22°C，晴。', 'id': 'lc_e0d38b2e-b0c5-49a3-bd49-05545b831843'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "杭州今天天气是温度22°C，晴。",
+  "n_steps": 2,
+  "latency_ms": 3731.715516999998,
+  "prompt_tokens": 4983,
+  "completion_tokens": 31,
+  "cost_usd": 0.00180628,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

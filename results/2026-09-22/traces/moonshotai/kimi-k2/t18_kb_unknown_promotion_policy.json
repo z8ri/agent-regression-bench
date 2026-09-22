@@ -1,0 +1,17 @@
+{
+  "task_id": "t18_kb_unknown_promotion_policy",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "我们公司远程办公员工转正之后，福利待遇会有什么变化？",
+  "tool_calls": [],
+  "final_answer": "我来帮您查询公司远程办公员工转正后的福利待遇变化相关信息。",
+  "n_steps": 1,
+  "latency_ms": 50448.94612499991,
+  "prompt_tokens": 797,
+  "completion_tokens": 25,
+  "cost_usd": 0.00051179,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

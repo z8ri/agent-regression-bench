@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "我需要知道待办事项的标题才能帮您添加。请告诉我您想提醒什么内容？",
+  "n_steps": 1,
+  "latency_ms": 4589.79832,
+  "prompt_tokens": 542,
+  "completion_tokens": 19,
+  "cost_usd": 0.00035264,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

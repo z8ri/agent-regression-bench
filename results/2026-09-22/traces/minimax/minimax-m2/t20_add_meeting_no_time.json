@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "您好！我想确认一下：您说的\"明天\"具体是指哪一天呢？日期格式需要是 YYYY-MM-DD（例如：2024-01-15）。请告诉我具体日期，我来帮您添加。",
+  "n_steps": 1,
+  "latency_ms": 5605.470820999926,
+  "prompt_tokens": 976,
+  "completion_tokens": 174,
+  "cost_usd": 0.00042636,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

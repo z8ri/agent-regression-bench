@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_1f7a4a59-cbaf-4f76-8e03-8c7a0d4a8b19'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "计算结果是 983.1。",
+  "n_steps": 2,
+  "latency_ms": 5930.485395999995,
+  "prompt_tokens": 5014,
+  "completion_tokens": 44,
+  "cost_usd": 0.00182264,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

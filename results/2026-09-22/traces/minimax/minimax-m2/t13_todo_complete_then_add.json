@@ -1,0 +1,30 @@
+{
+  "task_id": "t13_todo_complete_then_add",
+  "model": "minimax/minimax-m2",
+  "prompt": "把『提交周报』这条待办标记为已完成，然后再加一条新待办『准备月度会议材料』，截止日期 2026-10-05。",
+  "tool_calls": [],
+  "final_answer": null,
+  "n_steps": 0,
+  "latency_ms": 26244.03074999998,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "cost_usd": null,
+  "error": "max_steps_loop",
+  "final_state": {
+    "files": {},
+    "todos": [
+      {
+        "id": 1,
+        "title": "提交周报",
+        "due": "2026-09-25",
+        "done": true
+      },
+      {
+        "id": 6,
+        "title": "准备月度会议材料",
+        "due": null,
+        "done": false
+      }
+    ]
+  }
+}
