@@ -1,0 +1,34 @@
+{
+  "task_id": "t06_todo_add_simple",
+  "model": "z-ai/glm-4.5",
+  "prompt": "帮我加一条待办：交年终总结，截止日期是 2026-12-31。",
+  "tool_calls": [
+    {
+      "name": "add_todo",
+      "args": {
+        "title": "交年终总结",
+        "due": "2026-12-31"
+      },
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：交年终总结', 'id': 'lc_4d98c5aa-b135-4325-9c37-8177847fa762'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "已为你新增待办：**交年终总结**，截止日期 2026-12-31（待办编号 #1）。",
+  "n_steps": 2,
+  "latency_ms": 10892.109518000012,
+  "prompt_tokens": 1861,
+  "completion_tokens": 81,
+  "cost_usd": 0.00091848,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": [
+      {
+        "id": 1,
+        "title": "交年终总结",
+        "due": "2026-12-31",
+        "done": false
+      }
+    ]
+  }
+}

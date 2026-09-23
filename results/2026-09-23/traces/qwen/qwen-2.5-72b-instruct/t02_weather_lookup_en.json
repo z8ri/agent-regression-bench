@@ -1,0 +1,26 @@
+{
+  "task_id": "t02_weather_lookup_en",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "What's the weather like in Beijing today?",
+  "tool_calls": [
+    {
+      "name": "get_weather",
+      "args": {
+        "city": "Beijing"
+      },
+      "result": "[{'type': 'text', 'text': 'Beijing今天天气：温度18°C，晴。', 'id': 'lc_98a827b2-036b-4bf7-aeb9-80cc4547ffba'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "Today in Beijing, the weather is sunny with a temperature of 18°C.",
+  "n_steps": 2,
+  "latency_ms": 3233.36505799999,
+  "prompt_tokens": 4986,
+  "completion_tokens": 38,
+  "cost_usd": 0.00181016,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
