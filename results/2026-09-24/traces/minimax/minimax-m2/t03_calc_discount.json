@@ -1,0 +1,26 @@
+{
+  "task_id": "t03_calc_discount",
+  "model": "minimax/minimax-m2",
+  "prompt": "一件商品原价 259 元，打 8.5 折，算一下现价多少钱。",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "259 * 0.85"
+      },
+      "result": "[{'type': 'text', 'text': '220.15', 'id': 'lc_7b3ad166-26fa-4907-9ce9-7286196dfc9d'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "商品现价是 **220.15 元**。",
+  "n_steps": 2,
+  "latency_ms": 3979.150193999999,
+  "prompt_tokens": 2012,
+  "completion_tokens": 102,
+  "cost_usd": 0.0006171,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

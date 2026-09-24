@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "deepseek/deepseek-chat",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "请问您需要添加的待办事项的标题是什么？",
+  "n_steps": 1,
+  "latency_ms": 5097.436388999995,
+  "prompt_tokens": 2203,
+  "completion_tokens": 13,
+  "cost_usd": 0.00071653,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

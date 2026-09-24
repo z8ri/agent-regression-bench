@@ -1,0 +1,34 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [
+    {
+      "name": "add_todo",
+      "args": {
+        "title": "跟王总开会",
+        "due": "2023-04-06"
+      },
+      "result": "[{'type': 'text', 'text': '已新增待办 #1：跟王总开会', 'id': 'lc_6c0c9cfc-8e34-41d3-af51-5418b0b35284'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "已为您新增待办事项：明天跟王总开会。",
+  "n_steps": 2,
+  "latency_ms": 3637.142237999996,
+  "prompt_tokens": 5012,
+  "completion_tokens": 51,
+  "cost_usd": 0.00182472,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": [
+      {
+        "id": 1,
+        "title": "跟王总开会",
+        "due": "2023-04-06",
+        "done": false
+      }
+    ]
+  }
+}

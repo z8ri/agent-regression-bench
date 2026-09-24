@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "z-ai/glm-4.5",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_2d228a58-b64a-4330-9dfc-33fec486f42c'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "计算结果：**(1250 - 380) × 1.13 = 983.1**",
+  "n_steps": 2,
+  "latency_ms": 10999.176848999998,
+  "prompt_tokens": 1838,
+  "completion_tokens": 82,
+  "cost_usd": 0.0012832,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

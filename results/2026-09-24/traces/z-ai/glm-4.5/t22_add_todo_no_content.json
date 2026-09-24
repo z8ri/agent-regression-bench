@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "z-ai/glm-4.5",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "好的，请问待办的内容是什么呢？另外，需要设置截止日期吗？如果需要，请提供日期（格式：YYYY-MM-DD）。",
+  "n_steps": 1,
+  "latency_ms": 8279.386924999983,
+  "prompt_tokens": 899,
+  "completion_tokens": 64,
+  "cost_usd": 0.0006802,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

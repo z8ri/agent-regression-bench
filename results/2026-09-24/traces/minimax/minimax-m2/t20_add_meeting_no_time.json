@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "抱歉，我需要知道今天的日期才能推算“明天”是哪一天。请问今天是几月几号？",
+  "n_steps": 1,
+  "latency_ms": 4914.85812399992,
+  "prompt_tokens": 976,
+  "completion_tokens": 167,
+  "cost_usd": 0.00041922,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
