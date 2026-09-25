@@ -1,0 +1,17 @@
+{
+  "task_id": "t06_todo_add_simple",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加一条待办：交年终总结，截止日期是 2026-12-31。",
+  "tool_calls": [],
+  "final_answer": null,
+  "n_steps": 0,
+  "latency_ms": 24225.473308999994,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "cost_usd": null,
+  "error": "max_steps_loop",
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

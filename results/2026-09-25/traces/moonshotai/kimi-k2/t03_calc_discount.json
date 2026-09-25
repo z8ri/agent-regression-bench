@@ -1,0 +1,26 @@
+{
+  "task_id": "t03_calc_discount",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "一件商品原价 259 元，打 8.5 折，算一下现价多少钱。",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "259 * 0.85"
+      },
+      "result": "[{'type': 'text', 'text': '220.15', 'id': 'lc_a9a7f794-4078-4643-a9c0-26cf8dcd2497'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "现价是 **220.15 元**。\n\n计算方式：259 × 0.85 = 220.15 元。",
+  "n_steps": 2,
+  "latency_ms": 6610.276668000011,
+  "prompt_tokens": 1157,
+  "completion_tokens": 98,
+  "cost_usd": 0.0008848899999999999,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
