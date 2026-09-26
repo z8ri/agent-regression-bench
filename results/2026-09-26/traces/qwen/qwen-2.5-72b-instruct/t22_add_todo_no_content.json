@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "可以的，请告诉我待办事项的标题和截止日期（如果有的话）。",
+  "n_steps": 1,
+  "latency_ms": 2819.7923860000174,
+  "prompt_tokens": 2452,
+  "completion_tokens": 17,
+  "cost_usd": 0.00088952,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

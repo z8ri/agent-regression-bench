@@ -1,0 +1,54 @@
+{
+  "task_id": "t13_todo_complete_then_add",
+  "model": "z-ai/glm-4.5",
+  "prompt": "把『提交周报』这条待办标记为已完成，然后再加一条新待办『准备月度会议材料』，截止日期 2026-10-05。",
+  "tool_calls": [
+    {
+      "name": "list_todos",
+      "args": {},
+      "result": "[{'type': 'text', 'text': '[{\"id\": 1, \"title\": \"提交周报\", \"due\": \"2026-09-25\", \"done\": false}]', 'id': 'lc_3f829479-7dac-4f55-bd0f-426dbe3cf4c4'}]",
+      "timestamp": null
+    },
+    {
+      "name": "complete_todo",
+      "args": {
+        "id": 1
+      },
+      "result": "[{'type': 'text', 'text': '待办 #1 已标记完成', 'id': 'lc_76b1ef79-527d-4241-aca1-93ee33ab8379'}]",
+      "timestamp": null
+    },
+    {
+      "name": "add_todo",
+      "args": {
+        "title": "准备月度会议材料",
+        "due": "2026-10-05"
+      },
+      "result": "[{'type': 'text', 'text': '已新增待办 #2：准备月度会议材料', 'id': 'lc_3994eeea-e35f-4165-94ad-52e036b3b322'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "已完成两项操作：1）将\"提交周报\"标记为已完成；2）新增了\"准备月度会议材料\"待办，截止日期 2026-10-05。",
+  "n_steps": 3,
+  "latency_ms": 19607.984413999988,
+  "prompt_tokens": 2986,
+  "completion_tokens": 232,
+  "cost_usd": 0.0023020000000000002,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": [
+      {
+        "id": 1,
+        "title": "提交周报",
+        "due": "2026-09-25",
+        "done": true
+      },
+      {
+        "id": 2,
+        "title": "准备月度会议材料",
+        "due": "2026-10-05",
+        "done": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "t13_todo_complete_then_add",
+  "model": "deepseek/deepseek-chat",
+  "prompt": "把『提交周报』这条待办标记为已完成，然后再加一条新待办『准备月度会议材料』，截止日期 2026-10-05。",
+  "tool_calls": [],
+  "final_answer": null,
+  "n_steps": 1,
+  "latency_ms": 8955.203290000014,
+  "prompt_tokens": 2230,
+  "completion_tokens": 94,
+  "cost_usd": 0.00079726,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": [
+      {
+        "id": 1,
+        "title": "提交周报",
+        "due": "2026-09-25",
+        "done": false
+      }
+    ]
+  }
+}

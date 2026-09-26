@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "z-ai/glm-4.5",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "我需要知道明天的具体日期才能设置截止时间。请问明天是几号呢？（格式：YYYY-MM-DD）",
+  "n_steps": 1,
+  "latency_ms": 9489.03586299997,
+  "prompt_tokens": 902,
+  "completion_tokens": 102,
+  "cost_usd": 0.0007656,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
