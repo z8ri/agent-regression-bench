@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "deepseek/deepseek-chat",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "请提供待办的标题，如果需要截止日期，也可以告诉我（格式为 YYYY-MM-DD）。",
+  "n_steps": 1,
+  "latency_ms": 3733.8025859999675,
+  "prompt_tokens": 1201,
+  "completion_tokens": 23,
+  "cost_usd": 0.0003327975,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

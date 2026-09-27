@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_ac8bbe3e-4487-44f4-a4e1-7e7931e98b14'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "计算结果：**983.1**\n\n我使用了计算工具，计算了表达式 `(1250 - 380) * 1.13` 的结果为 983.1。",
+  "n_steps": 2,
+  "latency_ms": 7377.170245000002,
+  "prompt_tokens": 1148,
+  "completion_tokens": 80,
+  "cost_usd": 0.00083836,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

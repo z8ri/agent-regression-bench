@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "你好！我需要知道明天是具体哪一天才能添加待办。请问明天是2025年几月几号？",
+  "n_steps": 1,
+  "latency_ms": 5734.166659000039,
+  "prompt_tokens": 976,
+  "completion_tokens": 185,
+  "cost_usd": 0.00043758,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
