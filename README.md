@@ -37,37 +37,39 @@
 
 <!-- AUTO-GENERATED:START -->
 
-_最近一次运行：2026-09-27，30 个任务 × 5 个模型，repeat=3，总成本 $0.5624_
+_最近一次运行：2026-09-28，30 个任务 × 5 个模型，repeat=1，总成本 $0.2010_
 
 ### 榜单
 
 | model | overall pass | single | multi | refuse | clarify | injection | tool-call precision | avg steps | p50 latency | cost/task |
 |---|---|---|---|---|---|---|---|---|---|---|
-| z-ai/glm-4.5 \* | 91% | 100% | 100% | 60% | 87% | 100% | 91% | 2.4 | 15613ms | $0.00158 |
-| moonshotai/kimi-k2 | 90% | 100% | 100% | 73% | 67% | 100% | 93% | 2.2 | 6465ms | $0.00102 |
-| deepseek/deepseek-chat | 87% | 100% | 75% | 100% | 67% | 94% | 94% | 2.1 | 5858ms | $0.00088 |
-| minimax/minimax-m2 | 82% | 83% | 62% | 80% | 93% | 100% | 81% | 2.3 | 5691ms | $0.00087 |
-| qwen/qwen-2.5-72b-instruct | 54% | 94% | 42% | 80% | 60% | 6% | 84% | 2.1 | 4285ms | $0.00192 |
+| moonshotai/kimi-k2 | 90% | 100% | 100% | 60% | 80% | 100% | 95% | 2.2 | 6388ms | $0.00098 |
+| minimax/minimax-m2 | 87% | 83% | 75% | 100% | 80% | 100% | 89% | 2.1 | 5409ms | $0.00076 |
+| z-ai/glm-4.5 \* | 87% | 100% | 88% | 80% | 60% | 100% | 88% | 2.5 | 17027ms | $0.00169 |
+| deepseek/deepseek-chat | 60% | 100% | 38% | 100% | 40% | 33% | 94% | 1.9 | 5712ms | $0.00133 |
+| qwen/qwen-2.5-72b-instruct | 43% | 50% | 50% | 60% | 60% | 0% | 81% | 2.0 | 5085ms | $0.00195 |
 
 \* 该模型同时也是本轮的 judge。
 
 ### 失败类型 × 模型
 
-| failure_type | z-ai/glm-4.5 | moonshotai/kimi-k2 | deepseek/deepseek-chat | minimax/minimax-m2 | qwen/qwen-2.5-72b-instruct |
+| failure_type | moonshotai/kimi-k2 | minimax/minimax-m2 | z-ai/glm-4.5 | deepseek/deepseek-chat | qwen/qwen-2.5-72b-instruct |
 |---|---|---|---|---|---|
-| extra_call | 0 | 0 | 0 | 3 | 0 |
-| fabricated_answer | 3 | 3 | 0 | 2 | 0 |
-| injection_followed | 0 | 0 | 1 | 0 | 11 |
-| max_steps_loop | 0 | 0 | 0 | 5 | 0 |
-| missing_step | 0 | 0 | 2 | 0 | 6 |
-| no_clarify | 2 | 5 | 5 | 1 | 6 |
-| no_refusal | 3 | 1 | 0 | 1 | 3 |
-| wrong_final_state | 0 | 0 | 3 | 4 | 14 |
-| wrong_tool | 0 | 0 | 1 | 0 | 1 |
+| extra_call | 0 | 1 | 1 | 0 | 0 |
+| fabricated_answer | 2 | 0 | 1 | 0 | 0 |
+| injection_followed | 0 | 0 | 0 | 4 | 4 |
+| max_steps_loop | 0 | 2 | 0 | 0 | 0 |
+| missing_step | 0 | 0 | 0 | 3 | 1 |
+| no_clarify | 1 | 1 | 2 | 3 | 2 |
+| no_refusal | 0 | 0 | 0 | 0 | 1 |
+| other | 0 | 0 | 0 | 0 | 1 |
+| timeout | 0 | 0 | 0 | 0 | 3 |
+| wrong_final_state | 0 | 0 | 0 | 2 | 4 |
+| wrong_tool | 0 | 0 | 0 | 0 | 1 |
 
-### judge 与规则一致率：87%（149 对重叠判定）
+### judge 与规则一致率：86%（50 对重叠判定）
 
-已连续运行 7 天，累计 1350 次 (task, model) 评测。
+已连续运行 8 天，累计 1500 次 (task, model) 评测。
 
 <!-- AUTO-GENERATED:END -->
 

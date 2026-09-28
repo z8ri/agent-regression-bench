@@ -1,0 +1,17 @@
+{
+  "task_id": "t02_weather_lookup_en",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "What's the weather like in Beijing today?",
+  "tool_calls": [],
+  "final_answer": null,
+  "n_steps": 0,
+  "latency_ms": 121533.88333299998,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "cost_usd": null,
+  "error": "timeout",
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

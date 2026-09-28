@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_de55e1db-2031-46c0-bdf6-42506d4445ab'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "**(1250 - 380) * 1.13 = 983.1**\n\n计算过程：先算 1250 - 380 = 870，再乘以 1.13 得到 983.1。",
+  "n_steps": 2,
+  "latency_ms": 5167.762058999983,
+  "prompt_tokens": 2007,
+  "completion_tokens": 171,
+  "cost_usd": 0.0006862050000000001,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
