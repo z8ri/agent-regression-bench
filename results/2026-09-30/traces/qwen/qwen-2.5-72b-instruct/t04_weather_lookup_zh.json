@@ -1,0 +1,17 @@
+{
+  "task_id": "t04_weather_lookup_zh",
+  "model": "qwen/qwen-2.5-72b-instruct",
+  "prompt": "杭州今天天气怎么样？",
+  "tool_calls": [],
+  "final_answer": null,
+  "n_steps": 0,
+  "latency_ms": 122010.80083200002,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "cost_usd": null,
+  "error": "timeout",
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

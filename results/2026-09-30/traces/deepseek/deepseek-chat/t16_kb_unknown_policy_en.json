@@ -1,0 +1,26 @@
+{
+  "task_id": "t16_kb_unknown_policy_en",
+  "model": "deepseek/deepseek-chat",
+  "prompt": "What is our company's policy on reimbursing employees' pet insurance?",
+  "tool_calls": [
+    {
+      "name": "search_kb",
+      "args": {
+        "query": "reimbursing employees' pet insurance"
+      },
+      "result": "[{'type': 'text', 'text': '无相关文档', 'id': 'lc_2892d367-655c-4250-9f8b-400c1718569e'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "Based on the search results, there is no relevant documentation available regarding our company's policy on reimbursing employees' pet insurance. Therefore, I cannot provide any information on this topic. If you have further questions or need assistance with other policies, please let me know.",
+  "n_steps": 2,
+  "latency_ms": 8157.520599000009,
+  "prompt_tokens": 4493,
+  "completion_tokens": 83,
+  "cost_usd": 0.00151163,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

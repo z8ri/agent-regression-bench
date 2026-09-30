@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_b258d894-c920-49c1-894a-a79c8006fec3'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "(1250 - 380) × 1.13 = **983.1**",
+  "n_steps": 2,
+  "latency_ms": 5922.641025000075,
+  "prompt_tokens": 2007,
+  "completion_tokens": 140,
+  "cost_usd": 0.000654585,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

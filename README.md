@@ -37,36 +37,37 @@
 
 <!-- AUTO-GENERATED:START -->
 
-_最近一次运行：2026-09-29，30 个任务 × 5 个模型，repeat=1，总成本 $0.1934_
+_最近一次运行：2026-09-30，30 个任务 × 5 个模型，repeat=1，总成本 $0.1963_
 
 ### 榜单
 
 | model | overall pass | single | multi | refuse | clarify | injection | tool-call precision | avg steps | p50 latency | cost/task |
 |---|---|---|---|---|---|---|---|---|---|---|
-| moonshotai/kimi-k2 | 90% | 100% | 100% | 60% | 80% | 100% | 95% | 2.2 | 6321ms | $0.00097 |
-| z-ai/glm-4.5 \* | 90% | 100% | 100% | 60% | 80% | 100% | 91% | 2.4 | 16314ms | $0.00165 |
-| minimax/minimax-m2 | 87% | 83% | 62% | 100% | 100% | 100% | 94% | 2.1 | 5053ms | $0.00072 |
-| deepseek/deepseek-chat | 77% | 100% | 75% | 80% | 80% | 50% | 92% | 2.2 | 7227ms | $0.00105 |
-| qwen/qwen-2.5-72b-instruct | 53% | 83% | 50% | 80% | 60% | 0% | 80% | 2.1 | 4417ms | $0.00206 |
+| z-ai/glm-4.5 \* | 90% | 100% | 100% | 60% | 80% | 100% | 89% | 2.4 | 17569ms | $0.00170 |
+| moonshotai/kimi-k2 | 87% | 100% | 88% | 60% | 80% | 100% | 95% | 2.2 | 6823ms | $0.00100 |
+| minimax/minimax-m2 | 80% | 83% | 62% | 60% | 100% | 100% | 67% | 2.7 | 6026ms | $0.00102 |
+| deepseek/deepseek-chat | 73% | 100% | 38% | 100% | 80% | 67% | 97% | 1.9 | 6424ms | $0.00106 |
+| qwen/qwen-2.5-72b-instruct | 43% | 33% | 50% | 80% | 60% | 0% | 82% | 1.8 | 6285ms | $0.00176 |
 
 \* 该模型同时也是本轮的 judge。
 
 ### 失败类型 × 模型
 
-| failure_type | moonshotai/kimi-k2 | z-ai/glm-4.5 | minimax/minimax-m2 | deepseek/deepseek-chat | qwen/qwen-2.5-72b-instruct |
+| failure_type | z-ai/glm-4.5 | moonshotai/kimi-k2 | minimax/minimax-m2 | deepseek/deepseek-chat | qwen/qwen-2.5-72b-instruct |
 |---|---|---|---|---|---|
-| fabricated_answer | 2 | 1 | 0 | 1 | 0 |
-| injection_followed | 0 | 0 | 0 | 3 | 5 |
-| max_steps_loop | 0 | 0 | 2 | 0 | 0 |
-| missing_step | 0 | 0 | 0 | 0 | 2 |
+| extra_call | 0 | 0 | 2 | 0 | 0 |
+| fabricated_answer | 1 | 2 | 1 | 0 | 0 |
+| injection_followed | 0 | 0 | 0 | 2 | 4 |
+| max_steps_loop | 0 | 0 | 1 | 0 | 0 |
+| missing_step | 0 | 0 | 0 | 3 | 2 |
 | no_clarify | 1 | 1 | 0 | 1 | 2 |
-| no_refusal | 0 | 1 | 0 | 0 | 1 |
-| wrong_final_state | 0 | 0 | 2 | 1 | 4 |
-| wrong_tool | 0 | 0 | 0 | 1 | 0 |
+| no_refusal | 1 | 0 | 1 | 0 | 1 |
+| timeout | 0 | 0 | 0 | 0 | 4 |
+| wrong_final_state | 0 | 1 | 1 | 2 | 4 |
 
-### judge 与规则一致率：88%（50 对重叠判定）
+### judge 与规则一致率：84%（50 对重叠判定）
 
-已连续运行 9 天，累计 1650 次 (task, model) 评测。
+已连续运行 10 天，累计 1800 次 (task, model) 评测。
 
 <!-- AUTO-GENERATED:END -->
 
