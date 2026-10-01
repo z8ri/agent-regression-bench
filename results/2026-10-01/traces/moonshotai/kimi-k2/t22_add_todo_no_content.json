@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "好的，请告诉我待办事项的**标题**是什么？\n\n如果需要设置截止日期，也可以告诉我日期（格式：YYYY-MM-DD），这个是可选的。",
+  "n_steps": 1,
+  "latency_ms": 3503.001549999965,
+  "prompt_tokens": 542,
+  "completion_tokens": 31,
+  "cost_usd": 0.00038024,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

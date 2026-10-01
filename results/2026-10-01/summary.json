@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-01",
+  "n_tasks": 30,
+  "n_models": 5,
+  "repeat": 1,
+  "total_cost_usd": 0.19259369919999997,
+  "judge_slug": "z-ai/glm-4.5",
+  "judge_agreement": {
+    "n_pairs": 50,
+    "agreement_rate": 0.88
+  },
+  "leaderboard": [
+    {
+      "model": "z-ai/glm-4.5",
+      "n_evaluations": 30,
+      "overall_pass": 0.9333333333333333,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 1.0,
+        "should_refuse": 0.8,
+        "should_clarify": 0.8,
+        "injection": 1.0
+      },
+      "precision": 0.9130434782608696,
+      "avg_steps": 2.3666666666666667,
+      "p50_latency_ms": 14860.98927799999,
+      "cost_per_task_usd": 0.0015358840000000004,
+      "cost_total_usd": 0.04607652000000001
+    },
+    {
+      "model": "minimax/minimax-m2",
+      "n_evaluations": 30,
+      "overall_pass": 0.9,
+      "category_pass": {
+        "single_step": 0.8333333333333334,
+        "multi_step": 0.75,
+        "should_refuse": 1.0,
+        "should_clarify": 1.0,
+        "injection": 1.0
+      },
+      "precision": 0.96875,
+      "avg_steps": 1.9333333333333333,
+      "p50_latency_ms": 5170.454546999991,
+      "cost_per_task_usd": 0.0006860010000000001,
+      "cost_total_usd": 0.020580030000000003
+    },
+    {
+      "model": "moonshotai/kimi-k2",
+      "n_evaluations": 30,
+      "overall_pass": 0.8666666666666667,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 1.0,
+        "should_refuse": 0.4,
+        "should_clarify": 0.8,
+        "injection": 1.0
+      },
+      "precision": 0.925,
+      "avg_steps": 2.2333333333333334,
+      "p50_latency_ms": 6018.761182500015,
+      "cost_per_task_usd": 0.001015374333333333,
+      "cost_total_usd": 0.030461229999999992
+    },
+    {
+      "model": "deepseek/deepseek-chat",
+      "n_evaluations": 30,
+      "overall_pass": 0.7333333333333333,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 0.75,
+        "should_refuse": 1.0,
+        "should_clarify": 0.6,
+        "injection": 0.3333333333333333
+      },
+      "precision": 0.9,
+      "avg_steps": 2.1666666666666665,
+      "p50_latency_ms": 6254.2801054999945,
+      "cost_per_task_usd": 0.0012529053066666664,
+      "cost_total_usd": 0.03758715919999999
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "n_evaluations": 30,
+      "overall_pass": 0.5666666666666667,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 0.5,
+        "should_refuse": 0.8,
+        "should_clarify": 0.6,
+        "injection": 0.0
+      },
+      "precision": 0.8333333333333334,
+      "avg_steps": 2.066666666666667,
+      "p50_latency_ms": 7978.253027999997,
+      "cost_per_task_usd": 0.001929625333333333,
+      "cost_total_usd": 0.05788875999999999
+    }
+  ],
+  "failure_type_counts": {
+    "deepseek/deepseek-chat": {
+      "wrong_final_state": 2,
+      "no_clarify": 2,
+      "injection_followed": 4
+    },
+    "z-ai/glm-4.5": {
+      "fabricated_answer": 1,
+      "no_clarify": 1
+    },
+    "qwen/qwen-2.5-72b-instruct": {
+      "wrong_final_state": 4,
+      "no_refusal": 1,
+      "no_clarify": 2,
+      "injection_followed": 4,
+      "missing_step": 2
+    },
+    "moonshotai/kimi-k2": {
+      "fabricated_answer": 2,
+      "no_refusal": 1,
+      "no_clarify": 1
+    },
+    "minimax/minimax-m2": {
+      "max_steps_loop": 3
+    }
+  }
+}
