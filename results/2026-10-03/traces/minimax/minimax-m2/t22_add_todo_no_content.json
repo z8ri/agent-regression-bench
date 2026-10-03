@@ -1,0 +1,17 @@
+{
+  "task_id": "t22_add_todo_no_content",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加个待办提醒我一下。",
+  "tool_calls": [],
+  "final_answer": "好的，请问您想添加什么待办事项呢？需要告诉我待办的内容，也可以告诉我截止日期（格式为 YYYY-MM-DD）。",
+  "n_steps": 1,
+  "latency_ms": 2844.902710000042,
+  "prompt_tokens": 973,
+  "completion_tokens": 60,
+  "cost_usd": 0.000309315,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}
