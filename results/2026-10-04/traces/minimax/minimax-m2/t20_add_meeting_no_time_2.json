@@ -1,0 +1,17 @@
+{
+  "task_id": "t20_add_meeting_no_time",
+  "model": "minimax/minimax-m2",
+  "prompt": "帮我加个明天跟王总开会的待办。",
+  "tool_calls": [],
+  "final_answer": "您好！请问明天跟王总开会具体是几点？另外，这个待办的标题您希望怎么写，比如\"跟王总开会\"可以吗？",
+  "n_steps": 1,
+  "latency_ms": 6418.047255999909,
+  "prompt_tokens": 976,
+  "completion_tokens": 261,
+  "cost_usd": 0.0005151,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

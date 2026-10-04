@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "deepseek/deepseek-chat",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_c090b71e-e5a4-4cd9-9ef2-e060cc9cdc12'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "计算结果为983.1。",
+  "n_steps": 2,
+  "latency_ms": 5574.185193000005,
+  "prompt_tokens": 4495,
+  "completion_tokens": 38,
+  "cost_usd": 0.00147222,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

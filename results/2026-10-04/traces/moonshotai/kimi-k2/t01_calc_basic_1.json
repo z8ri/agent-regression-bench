@@ -1,0 +1,26 @@
+{
+  "task_id": "t01_calc_basic",
+  "model": "moonshotai/kimi-k2",
+  "prompt": "帮我算 (1250 - 380) * 1.13",
+  "tool_calls": [
+    {
+      "name": "calculate",
+      "args": {
+        "expression": "(1250 - 380) * 1.13"
+      },
+      "result": "[{'type': 'text', 'text': '983.1', 'id': 'lc_4ed5d259-561c-4340-92c2-965439cb371a'}]",
+      "timestamp": null
+    }
+  ],
+  "final_answer": "计算结果：**983.1**",
+  "n_steps": 2,
+  "latency_ms": 6076.080017999971,
+  "prompt_tokens": 1148,
+  "completion_tokens": 70,
+  "cost_usd": 0.00081536,
+  "error": null,
+  "final_state": {
+    "files": {},
+    "todos": []
+  }
+}

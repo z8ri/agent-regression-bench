@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-04",
+  "n_tasks": 30,
+  "n_models": 5,
+  "repeat": 3,
+  "total_cost_usd": 0.5776986871,
+  "judge_slug": "z-ai/glm-4.5",
+  "judge_agreement": {
+    "n_pairs": 150,
+    "agreement_rate": 0.8533333333333334
+  },
+  "leaderboard": [
+    {
+      "model": "moonshotai/kimi-k2",
+      "n_evaluations": 90,
+      "overall_pass": 0.8888888888888888,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 0.9583333333333334,
+        "should_refuse": 0.7333333333333333,
+        "should_clarify": 0.6666666666666666,
+        "injection": 1.0
+      },
+      "precision": 0.9333333333333333,
+      "avg_steps": 2.2222222222222223,
+      "p50_latency_ms": 6203.133510999919,
+      "cost_per_task_usd": 0.0010220626666666668,
+      "cost_total_usd": 0.09198564000000001
+    },
+    {
+      "model": "z-ai/glm-4.5",
+      "n_evaluations": 90,
+      "overall_pass": 0.8777777777777778,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 0.9166666666666666,
+        "should_refuse": 0.7333333333333333,
+        "should_clarify": 0.6666666666666666,
+        "injection": 1.0
+      },
+      "precision": 0.8873239436619719,
+      "avg_steps": 2.422222222222222,
+      "p50_latency_ms": 15626.458356500025,
+      "cost_per_task_usd": 0.0016067591111111107,
+      "cost_total_usd": 0.14460831999999996
+    },
+    {
+      "model": "minimax/minimax-m2",
+      "n_evaluations": 90,
+      "overall_pass": 0.7888888888888889,
+      "category_pass": {
+        "single_step": 0.8333333333333334,
+        "multi_step": 0.625,
+        "should_refuse": 0.8,
+        "should_clarify": 0.7333333333333333,
+        "injection": 1.0
+      },
+      "precision": 0.8918918918918919,
+      "avg_steps": 2.111111111111111,
+      "p50_latency_ms": 5440.285791999884,
+      "cost_per_task_usd": 0.0007487310000000003,
+      "cost_total_usd": 0.06738579000000003
+    },
+    {
+      "model": "deepseek/deepseek-chat",
+      "n_evaluations": 90,
+      "overall_pass": 0.6444444444444445,
+      "category_pass": {
+        "single_step": 1.0,
+        "multi_step": 0.4166666666666667,
+        "should_refuse": 0.8,
+        "should_clarify": 0.5333333333333333,
+        "injection": 0.5555555555555556
+      },
+      "precision": 0.9313725490196079,
+      "avg_steps": 2.011111111111111,
+      "p50_latency_ms": 5980.195662999975,
+      "cost_per_task_usd": 0.0011350588566666664,
+      "cost_total_usd": 0.10215529709999999
+    },
+    {
+      "model": "qwen/qwen-2.5-72b-instruct",
+      "n_evaluations": 90,
+      "overall_pass": 0.5555555555555556,
+      "category_pass": {
+        "single_step": 0.8888888888888888,
+        "multi_step": 0.5,
+        "should_refuse": 0.8,
+        "should_clarify": 0.6,
+        "injection": 0.05555555555555555
+      },
+      "precision": 0.8442622950819672,
+      "avg_steps": 2.011111111111111,
+      "p50_latency_ms": 4653.530785500038,
+      "cost_per_task_usd": 0.001906262666666667,
+      "cost_total_usd": 0.17156364000000002
+    }
+  ],
+  "failure_type_counts": {
+    "deepseek/deepseek-chat": {
+      "wrong_final_state": 5,
+      "wrong_tool": 3,
+      "missing_step": 6,
+      "fabricated_answer": 1,
+      "no_refusal": 2,
+      "no_clarify": 7,
+      "injection_followed": 8
+    },
+    "z-ai/glm-4.5": {
+      "extra_call": 2,
+      "fabricated_answer": 3,
+      "no_refusal": 1,
+      "no_clarify": 5
+    },
+    "qwen/qwen-2.5-72b-instruct": {
+      "timeout": 2,
+      "wrong_final_state": 12,
+      "no_refusal": 3,
+      "no_clarify": 6,
+      "injection_followed": 11,
+      "missing_step": 6
+    },
+    "moonshotai/kimi-k2": {
+      "wrong_final_state": 1,
+      "fabricated_answer": 4,
+      "no_clarify": 5
+    },
+    "minimax/minimax-m2": {
+      "max_steps_loop": 8,
+      "extra_call": 1,
+      "wrong_final_state": 3,
+      "fabricated_answer": 3,
+      "no_clarify": 4
+    }
+  }
+}
